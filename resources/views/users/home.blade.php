@@ -48,9 +48,7 @@
                     </div>
                     <div class="col text-end">
                         <a href="{{route('suggest')}}" class="fw-bold text-dark text-decoration-none">See All 
-                            @foreach($suggested_users as $user)
-                                {{$user->followers->count()}}
-                            @endforeach
+                            {{collect($suggested_users)->count()}}
                         </a>
                     </div>
                 </div>
